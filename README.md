@@ -20,6 +20,7 @@ export PATH=$PATH:$GOROOT/bin
 go run xx.go
 ```
 
+### 接下来需要配置Go的一款开发工具GoLand
 
 - 4, GoLand安装与配置
 > https://www.jetbrains.com/go/
