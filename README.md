@@ -14,7 +14,7 @@ export GOROOT=/usr/local/go
 export PATH=$PATH:$GOROOT/bin
 ```
 
-- 3, 测试，在终端输入go version
+- 3, 测试，在终端输入`go version`
   - 3.1 运行go程序文件
 ```
 go run xx.go
@@ -22,10 +22,8 @@ go run xx.go
 
 ### 接下来需要配置Go的一款开发工具GoLand
 
-- 4, GoLand安装与配置
+- 1, GoLand安装与配置
 > https://www.jetbrains.com/go/
 
-- 5, 配置GOPATH
-> 这一步非常重要，否则代码中的依赖包将无法识别。一般GOPATH都配置到项目名这一层
 
 
