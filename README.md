@@ -1,4 +1,4 @@
-## Golang 环境配置
+### Golang 环境配置
 
 - 1, Mac OS X（也称为 Darwin） go安装
 
@@ -24,6 +24,5 @@ go run xx.go
 
 - 1, GoLand安装与配置
 > https://www.jetbrains.com/go/
-
 
 
