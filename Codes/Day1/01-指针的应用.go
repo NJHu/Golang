@@ -3,8 +3,10 @@ package main
 import "fmt"
 
 func main()  {
-    fmt.Println("12321312")
-    fmt.Println("12321312")
-    fmt.Println("12321312")
-    fmt.Println("12321312")
+
+    var a int = 10
+
+    var p *int  = &a
+
+    fmt.Println(&a, a, p, &p, *p)
 }
