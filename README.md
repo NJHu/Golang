@@ -1,7 +1,8 @@
-### [Golang学习笔记](Book/SUMMARY.md)
-### [Golang配套源码](NJCode/)
+## Golang
+>[Golang学习笔记](Book/SUMMARY.md)<br>
+>[Golang配套源码](Codes/)
 
-### Golang 环境配置
+### 环境配置
 
 - 1, Mac OS X（也称为 Darwin） go安装
 
