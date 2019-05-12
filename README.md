@@ -1,5 +1,5 @@
 ## Golang
->[Golang学习笔记](Book/SUMMARY.md)<br>
+>[Golang学习笔记](SUMMARY.md)<br>
 >[Golang配套源码](Codes/)
 
 ### 环境配置
