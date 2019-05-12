@@ -1,4 +1,4 @@
-### [Golang学习笔记](Book/)
+### [Golang学习笔记](Book/SUMMARY.md)
 ### [Golang配套源码](NJCode/)
 
 ### Golang 环境配置
