@@ -122,18 +122,175 @@ func main() {
 
 ```
 
+- 字符串
 
+```go
+    var str1 string = "1第一句1"
+	var str2 string = "2第二句2"
+	fmt.Println(str1 + str2)
+	fmt.Println(len(str1))
+	fmt.Printf("%d", len(str2))
+```
 
+- 进制
 
+```go
+	var a int = 225
+	fmt.Printf("二进制: %b\n", a)
+	fmt.Printf("八进制: %o\n", a)
+	fmt.Printf("十进制: %d\n", a)
+	fmt.Printf("十六机制大: %X\n", a)
+	fmt.Printf("十六进制小: %x\n", a)
 
+	var b int = 010;
+	var c int = 0xABC;
+	fmt.Println(b)
+	fmt.Println(c)
 
+	//
+	二进制: 11100001
+    八进制: 341
+    十进制: 225
+    十六机制大: E1
+    十六进制小: e1
+    8
+    2748
+```
 
+- 枚举
 
+```go
+	//在定义iota枚举时可以自定义赋值
+	const (
+		a = iota
+		b
+		c = 20
+		d
+		e
+		f = iota
+		g
+	)
+	//a=100//err
+	fmt.Println(a)
+	fmt.Println(b)
+	fmt.Println(c)
+	fmt.Println(d)
+	fmt.Println(e)
+	fmt.Println(f)
+	fmt.Println(g)
+	//
+	0
+    1
+    20
+    20
+    20
+    5
+    6
+```
 
+- fallthrough
 
+```go
+//根据输入的年份月份 计算这个月有多少天
 
+	var y int
+	var m int
+	fmt.Scan(&y, &m)
 
+	//在switch语句中可以把相同的值放在一个case中
+	switch m {
+	case 1, 3, 5, 7, 8, 10, 12:
+		fmt.Println(31)
+	case 4, 6, 9, 11:
+		fmt.Println(30)
+	//fallthrough 在case中向下执行下一个case
+	//case 1:
+	//	fallthrough
+	//case 3:
+	//	fallthrough
+	//case 5:
+	//	fallthrough
+	//case 7:
+	//	fallthrough
+	//case 8:
+	//	fallthrough
+	//case 10:
+	//	fallthrough
+	//case 12:
+	//	fmt.Println(31)
+	//
+	//case 4:
+	//	fallthrough
+	//case 6:
+	//	fallthrough
+	//case 9:
+	//	fallthrough
+	//case 11:
+	//	fmt.Println(30)
+	case 2:
+		//判断是否是闰年  能被4整除 但是 不能被100整除  或 能被400整除
+		if y%4 == 0 && y%100 != 0 || y%400 == 0 {
+			fmt.Println(29)
+		} else {
+			fmt.Println(28)
+		}
 
+	default:
+		fmt.Println("月份输入错误")
+	}
+```
+
+- `goto`and`FLAG`
+
+```go
+	fmt.Println("hello world1")
+	fmt.Println("hello world2")
+	//如果在代码中入到goto 会跳到所定义的标志位
+	//可以在一个循环中跳到另外一个循环中  可以在一个函数中跳到另外一个函数中
+	goto FLAG
+	fmt.Println("hello world3")
+	fmt.Println("hello world4")
+	FLAG:
+	fmt.Println("hello world5")
+	fmt.Println("hello world6")
+```
+
+- 数组遍历
+
+```go
+func sumArr(arrNums...int) {
+	for _, v := range arrNums {
+		println(v)
+	}
+}
+```
+
+- 函数返回值
+
+```go
+//多个返回值
+func test5(a int, b int) (sum int, sub int) {
+	sum = a + b
+	sub = a - b
+	return
+}
+```
+
+- 函数类型
+
+```go
+type FuncType func(int, int)
+```
+
+- 匿名单数
+
+```go
+var f FuncType
+f = func(a int, b int) {
+	fmt.Println(a + b)
+}
+f(a, b)
+```
 
 
 
